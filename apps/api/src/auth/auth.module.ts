@@ -70,7 +70,6 @@ https://stackoverflow.com/questions/76466982/getting-secretorprivatekey-must-hav
       inject: [GitlabOAuthStrategyFactory]
     }
   ],
-  controllers: [AuthController],
-  exports: [AuthService]
+  controllers: [AuthController]
 })
 export class AuthModule {}
