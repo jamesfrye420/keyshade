@@ -31,11 +31,7 @@ import { FeedbackModule } from '../feedback/feedback.module'
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: '../../.env',
-      validate: EnvSchema.parse,
-      validationOptions: {
-        allowUnknown: false,
-        abortEarly: true
-      }
+      validate: EnvSchema.parse
     }),
     ScheduleModule.forRoot(),
     PassportModule,
