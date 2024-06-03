@@ -5,9 +5,9 @@
 <div align="left">
 
 <p align="center">
-    <a href="https://keyshade.xyz?ref=github" target="_blank"><b>Website</b></a> •
+    <a href="https://www.keyshade.xyz?ref=github" target="_blank"><b>Website</b></a> •
     <a href="https://docs.keyshade.xyz/" target="_blank"><b>Documentation</b></a> •
-    <a href="https://discord.gg/m6TcpWBSdt" target="_blank"><b>Join our Community</b></a> • 
+    <a href="https://discord.gg/akDnHRhW" target="_blank"><b>Join our Community</b></a> • 
     <a href="https://twitter.com/keyshade_xyz" target="_blank"><b>Twitter</b></a>
     <a href="https://www.linkedin.com/company/keyshade-xyz/" target="_blank"><b>LinkedIn</b></a>
 </p>
@@ -76,41 +76,16 @@ Our goal is to enable you to manage your secrets effortlessly. We don't want to 
 
 - **Integrations**: Our vast library of integration allows you to use keyshade with your favorite tools and platforms.
 
-## Architecture
-
-The following few diagrams try to explain the architecture of keyshade.
-
-### Control Flow
-
-![Control Flow](./blob/control-flow.png)
-
-### Hierarchical Structure
-
-![Hierarchical Structure](./blob/data-hierarchy.png)
-
-### Behind the curtain
-
-#### Projects
-
-![Projects](./blob/projects.png)
-
-#### Creating secrets
-
-![Creating secrets](./blob/secret-creation.png)
-
-#### Retrieving secrets
-
-![Retrieving secrets](./blob/secret-retrieval.png)
-
 ## Setting things up
 
-We maintain an in-detailed documentation about how to get started with keyshade. You can find it [here](https://docs.keyshade.xyz/).
+We maintain an in-detailed documentation about how to get started with keyshade. You can find it [here](https://docs.keyshade.xyz/contributing-to-keyshade/setting-things-up).
 
 ## Contributing
 
 We welcome contributions from everyone. Please read our [contributing guide](./CONTRIBUTING.md) to get started.
 
 ## Contributors
+
 <a href="https://github.com/keyshade-xyz/keyshade/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=keyshade-xyz/keyshade&max=400&columns=20" />
   <img src="https://us-central1-tooljet-hub.cloudfunctions.net/github" width="0" height="0" />

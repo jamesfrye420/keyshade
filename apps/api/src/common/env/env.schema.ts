@@ -28,7 +28,7 @@ const e2eEnvSchema = z.object({
 const generalSchema = z.object({
   NODE_ENV: z.literal('dev'),
   DATABASE_URL: z.string(),
-  ADMIN_EMAIL: z.string(),
+  ADMIN_EMAIL: z.string().email(),
 
   REDIS_URL: z.string(),
   REDIS_PASSWORD: z.string().optional(),
@@ -56,17 +56,29 @@ const generalSchema = z.object({
 
   SMTP_HOST: z.string(),
   SMTP_PORT: z.string(),
-  SMTP_EMAIL_ADDRESS: z.string(),
+  SMTP_EMAIL_ADDRESS: z.string().email(),
   SMTP_PASSWORD: z.string(),
-  // TODO: add regex check for FORM_EMAIL value as represented in .env.example (your-name <your-name@email.com>)
-  FROM_EMAIL: z.string(),
+  FROM_EMAIL: z
+    .string()
+    .regex(
+      /^[a-zA-Z0-9._%+-]+(?: [a-zA-Z0-9._%+-]+)* <[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}>$/
+    ),
 
   JWT_SECRET: z.string(),
 
   WEB_FRONTEND_URL: z.string().url(),
   PLATFORM_FRONTEND_URL: z.string().url(),
   PLATFORM_OAUTH_SUCCESS_REDIRECT_PATH: z.string(),
-  PLATFORM_OAUTH_FAILURE_REDIRECT_PATH: z.string()
+  PLATFORM_OAUTH_FAILURE_REDIRECT_PATH: z.string(),
+
+  MINIO_ENDPOINT: z.string().optional(),
+  MINIO_PORT: z.string().optional(),
+  MINIO_ACCESS_KEY: z.string().optional(),
+  MINIO_SECRET_KEY: z.string().optional(),
+  MINIO_BUCKET_NAME: z.string().optional(),
+  MINIO_USE_SSL: z.string().optional(),
+
+  FEEDBACK_FORWARD_EMAIL: z.string().email()
 })
 
 export type EnvSchemaType = z.infer<typeof generalSchema>
